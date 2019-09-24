@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:St_Dogmaels.ViewModels"
+             x:Class="St_Dogmaels.Views.AbbeyPage"
+              Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AbbeyViewModel />
+    </ContentPage.BindingContext>
+
+    <Label Text="Under construction"/>
+
+</ContentPage>
+
+<!-- <StackLayout>
+                        <Label Text="{Binding Title}" TextColor="Red"   
+                                    HorizontalOptions="CenterAndExpand"/>
+                        <Image Source="{Binding Image}"  />
+                        <Label   Text="{Binding Description}" HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap"
+                                      />
+
+                    </StackLayout>
+                </DataTemplate>-->

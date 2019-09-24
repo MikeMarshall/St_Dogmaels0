@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="St_Dogmaels.Views.FacilitiesPage"
+             xmlns:vm="clr-namespace:St_Dogmaels.ViewModels"
+               Title="{Binding Title}"            >
+
+    <ContentPage.BindingContext>
+        <vm:FacilitiesViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout >
+        <Label Text="Click item for website" HorizontalTextAlignment="End"/>
+            <ListView x:Name="listView" ItemTapped ="Item_Tapped" HasUnevenRows="True"   VerticalOptions = "FillAndExpand" HorizontalOptions="StartAndExpand">
+                <ListView.ItemTemplate  >
+                <DataTemplate >
+                    <ImageCell Text="{Binding Name}"
+                           Detail="{Binding Detail}"
+                           ImageSource="{Binding Image}"
+                           Height="150"
+                               
+                               />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+<!--<StackLayout>
+    <Label Text="Where to stay" FontSize="Large" FontAttributes="Bold" />
+    <Label Text="Bed and Breakfast" FontSize="Medium" FontAttributes="Italic"/>
+    <Label Text="Oriel Milgi Bed and Breakfast" FontAttributes="Bold" />
+    <Label>
+        <Label.FormattedText>
+            <FormattedString>
+
+                <Span Text="great rooms - great breakfast - great art see  " />
+                <Span Text="web page"
+                  TextColor="Blue"
+                  TextDecorations="Underline">
+                    <Span.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="http://wwww.orielmilgi.co.uk" />
+                    </Span.GestureRecognizers>
+                </Span>
+                <Span Text="." />
+            </FormattedString>
+        </Label.FormattedText>
+    </Label>
+
+</StackLayout>-->

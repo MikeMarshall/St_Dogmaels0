@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:c="clr-namespace:St_Dogmaels.Containers"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"          
+             xmlns:m="clr-namespace:St_Dogmaels.Models"
+             xmlns:vm="clr-namespace:St_Dogmaels.ViewModels"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+            
+             x:Class="St_Dogmaels.Views.MapPage"
+             Title="{Binding Title}">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Icon="layers" Text="Layers" Clicked="Layer_Clicked" />
+        <ToolbarItem Icon="minus.png" Text="Zoom Out" Clicked="Zoom_Out_Clicked"/>
+        <ToolbarItem Icon="plus.png" Text="Zoom In" Clicked="Zoom_In_Clicked"/>
+        <ToolbarItem
+                    Priority="0" Order="Secondary" 
+                    Text="Search"
+                    Clicked="SearchButtonClicked"
+                     />
+        <ToolbarItem
+                    Priority="1" Order="Secondary" 
+                    Text="Clear Walks"
+                    Clicked="ClearWalksClicked"
+                     />
+         
+        
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.BindingContext>
+        <vm:MapViewModel />
+    </ContentPage.BindingContext>
+   
+
+        <skia:SKCanvasView x:Name="canvasView"  PaintSurface="OnCanvasViewPaintSurface" HeightRequest="1024" WidthRequest="1024" EnableTouchEvents="True" Touch="OnTouch">
+            
+        </skia:SKCanvasView>
+
+
+    
+        
+        
+    
+</ContentPage>
+
+<!--<ToolbarItem x:Name="txtSubZoom" Text="0" />
+<ToolbarItem Icon="plus.png" Text="Zoom In" Clicked="ZoomSub_In_Clicked"/>-->
+
+<!--<Grid.Effects>
+    <vm1:TouchEffect Capture="True" TouchAction="OnTouchEffectAction" />
+</Grid.Effects>-->
+
+<!--StackLayout Padding="10,40,10,10" >
+    --><!--For ZOOMING the image--><!--
+
+    <local:MapView   x:Name="Mapview">
+
+        <local:MapView.Center>
+            <local:Position 
+                    Latitude="52.0818715"
+                    Longitude="-4.6803483"/>
+
+        </local:MapView.Center>
+        <local:MapView.Content>
+            <Image  x:Name="MapImage" Source="StDogmaels.png"                         
+                       />
+        </local:MapView.Content>
+    </local:MapView>
+
+
+
+</StackLayout>-->

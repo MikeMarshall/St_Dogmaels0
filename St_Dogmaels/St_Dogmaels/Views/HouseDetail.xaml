@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="St_Dogmaels.Views.HouseDetail"
+             xmlns:vm="clr-namespace:St_Dogmaels.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.Content>
+        <StackLayout>
+           
+            <WebView x:Name="webView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <WebView.Source>
+                    <HtmlWebViewSource BaseUrl="/" Html="{Binding Description}" ></HtmlWebViewSource>
+                </WebView.Source>
+            </WebView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+<!--{Binding Description.Substring(0,30)}-->

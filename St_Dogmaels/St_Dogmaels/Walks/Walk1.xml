@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Walk>
+  <Name>St Dogmaels Circular Walk1</Name>
+  <Distance>0.5 miles</Distance>
+  <Time>10 minutes</Time>
+  <Grade>Easy</Grade>
+  <Description>A circular walk around St Dogmaels</Description>
+  <Start>The walk starts from the St Dogmaels car park.</Start>
+  <Steps>
+    <Step>
+      <Latitude>52.081831</Latitude>
+      <Longitude>-4.680298</Longitude>
+      <Title>St Dogmaels Car Park</Title>
+      <Subtitle>Toilets available</Subtitle>
+    </Step>
+    <Step>
+      <Latitude>52.082513</Latitude>
+      <Longitude>-4.678826</Longitude>
+      <Title>Pinnog</Title>
+      <Subtitle>Use to full of boats</Subtitle>
+    </Step>
+    <Step>
+      <Latitude>52.082131</Latitude>
+      <Longitude>-4.678628</Longitude>
+      <Title>B V Rees</Title>
+      <Subtitle>Cars for sale</Subtitle>
+    </Step>
+    <Step>
+      <Latitude>52.081289</Latitude>
+      <Longitude>-4.679263</Longitude>
+      <Title>B V Rees</Title>
+      <Subtitle>Get your car fixed</Subtitle>
+    </Step>
+    <Step>
+      <Latitude>52.079976</Latitude>
+      <Longitude>-4.678470</Longitude>
+      <Title>Turn Right</Title>
+      <Subtitle>Look at pond</Subtitle>
+    </Step>
+    <Step>
+      <Latitude>52.080591</Latitude>
+      <Longitude>-4.679528</Longitude>
+      <Title>Abbey/Coach House</Title>
+      <Subtitle>Have a cup of coffee and a snack</Subtitle>
+    </Step>
+  </Steps>
+</Walk>

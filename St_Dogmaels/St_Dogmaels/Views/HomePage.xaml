@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="St_Dogmaels.Views.HomePage"
+              Title="{Binding Title}"
+             xmlns:vm="clr-namespace:St_Dogmaels.ViewModels"
+             x:Name="BrowseItemsPage">
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Text="Add" Clicked="AddItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>-->
+    </ContentPage.ToolbarItems>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+        <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="AliceBlue">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120" />
+                    <RowDefinition Height="120" />
+                    <RowDefinition Height="120" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="homemap" Grid.Row="0" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="MapButtonClicked"/>
+                <ImageButton Source="homefacilities" Grid.Row="0" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="FacilitiesButtonClicked"/>
+                <ImageButton Source="homepoi" Grid.Row="1" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="PoiButtonClicked"/>
+                <ImageButton Source="homegeology" Grid.Row="1" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="GeologyButtonClicked"/>
+                <ImageButton Source="homewalks" Grid.Row="2" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="WalksButtonClicked"/>
+                <ImageButton Source="homeabbey" Grid.Row="2" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="AbbeyButtonClicked"/>
+            </Grid>
+
+        </ContentView>
+    </StackLayout>
+</ContentPage>

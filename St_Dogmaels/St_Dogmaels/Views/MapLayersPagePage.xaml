@@ -1,0 +1,98 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            
+             x:Class="St_Dogmaels.Views.MapLayersPage"
+             Title="Map Layers">
+    <ContentPage.Content>
+        <Grid Margin="20,35,20,20">
+            <Grid.RowDefinitions>
+                
+                <RowDefinition Height="*" />
+              
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label  Grid.Row="0" Grid.Column="0"
+                   Text="Houses"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Start" />
+            <Switch  x:Name="HousesSwitch" 
+                     Grid.Row="0" Grid.Column="1"
+                    Toggled="Houses_Switch_Toggled"
+                    IsToggled="False"
+                    OnColor="Orange"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+
+            <Label  Grid.Row="1" Grid.Column="0"
+                   Text="Landscape"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Start" />
+            <Switch x:Name="LandscapeSwitch"
+                    Grid.Row="1" Grid.Column="1"
+                    Toggled="Landscape_Switch_Toggled"
+                    IsToggled="False"
+                    OnColor="Orange"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+
+            <Label  Grid.Row="2" Grid.Column="0"
+                   Text="Gardens"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Start" />
+            <Switch x:Name="GardensSwitch"
+                    Grid.Row="2" Grid.Column="1"
+                    Toggled="Gardens_Switch_Toggled"
+                    IsToggled="False"
+                    OnColor="Orange"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+
+            <Label  Grid.Row="3" Grid.Column="0"
+                   Text="Walks"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Start" />
+            <Switch x:Name="WalksSwitch"
+                    Grid.Row="3" Grid.Column="1"
+                    Toggled="Walks_Switch_Toggled"
+                    IsToggled="False"
+                    OnColor="Orange"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+
+            <Label  Grid.Row="4" Grid.Column="0"
+                   Text="Points of Interest"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Start" />
+            <Switch x:Name="PoisSwitch"
+                    Grid.Row="4" Grid.Column="1"
+                    Toggled="Pois_Switch_Toggled"
+                    IsToggled="False"
+                    OnColor="Orange"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+
+            <Label  Grid.Row="5" Grid.Column="0"
+                   Text="Facilities"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Start" />
+            <Switch x:Name="FacilitiesSwitch"
+                    Grid.Row="5" Grid.Column="1"
+                    Toggled="Facilities_Switch_Toggled"
+                    IsToggled="False"
+                    OnColor="Orange"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+            
+            <Button Text="Close" Clicked="Close_Button" Grid.Row="6" Grid.ColumnSpan="2" WidthRequest="40"/>
+            
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

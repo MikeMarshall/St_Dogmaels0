@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:St_Dogmaels.ViewModels"
+             x:Class="St_Dogmaels.Views.PoiPage"
+              Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:PoiViewModel />
+    </ContentPage.BindingContext>
+
+
+
+    <StackLayout Padding="5,5,5,5" VerticalOptions="Fill" HorizontalOptions="Fill">
+        <CarouselView x:Name="carousel" >
+            <CarouselView.ItemTemplate >
+                <DataTemplate>
+                    <StackLayout>
+                        <Grid  RowSpacing="5"
+                               
+                               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width,  Factor=1}"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Height,  Factor=1}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="300"/>
+                                <RowDefinition Height="100"/>
+
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="350"/>
+
+
+
+                            </Grid.ColumnDefinitions>
+
+
+
+                            <Label Text="{Binding Title}" TextColor="Red"   
+                                    Grid.Row ="0" Grid.Column="0" HorizontalOptions="CenterAndExpand"/>
+                            <Image Source="{Binding Image}"  Grid.Row="1" Grid.Column="0"/>
+                            <Label Text="{Binding Description}" HorizontalOptions="FillAndExpand"
+                                      Grid.Row="2" Grid.Column="0"/>
+
+
+
+
+                        </Grid>
+
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+
+</ContentPage>
+

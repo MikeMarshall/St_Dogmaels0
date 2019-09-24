@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="St_Dogmaels.Views.WalksPage"
+             xmlns:vm="clr-namespace:St_Dogmaels.ViewModels"
+             Opacity="1"
+             BackgroundColor="Azure"
+          Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:WalksViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+                    
+                    Priority="0" Order="Primary" 
+                    Text="Add to Map" 
+                    Clicked="AddToMapClicked"                 
+                     />
+
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout Margin="10,5,5,10">
+
+        <ListView  ItemsSource="{Binding Walks}"           
+          HasUnevenRows="true"
+          x:Name="lvWalks"
+          ItemSelected="OnListViewSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan ="3"
+                                       FontAttributes="Bold"
+                                       Text="{Binding Name}" />
+                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan ="3"
+                                       Text="{Binding Description}" />
+                            <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="Start"
+                                       Text="{Binding Distance}" />
+                            <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"
+                                       Text="{Binding Time}" />
+                            <Label Grid.Row="2" Grid.Column="2" HorizontalOptions ="End"
+                                       Text="{Binding Grade}" />
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
